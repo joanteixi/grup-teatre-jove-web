@@ -9,7 +9,9 @@
 #
 # Us:   ./publica.sh "missatge del canvi"
 #
-# Si alguna cosa falla, s'atura i ho diu. No desplega res a mitges.
+# Si la compilacio o el desplegament fallen, s'atura: val mes no publicar res
+# que publicar una web a mitges. Si el que falla es el GitHub, la web queda
+# igualment publicada i nomes ho avisa.
 
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -41,7 +43,17 @@ if git diff --cached --quiet; then
 else
   git -c user.name="Apuntador" -c user.email="apuntador@grupteatrejove.cat" \
       commit -q -m "$MISSATGE"
-  git push -q origin main && echo "     pujat a GitHub"
+fi
+
+# El desplegament ja esta fet: a partir d'aqui res no ha de fer fallar l'ordre.
+set +e
+git pull -q --rebase origin main >/dev/null 2>&1
+if git push -q origin main 2>/dev/null; then
+  echo "     pujat a GitHub"
+else
+  echo "     AVIS: no s'ha pogut pujar a GitHub."
+  echo "     La web SI que s'ha publicat; el codi s'ha quedat aquí pendent."
+  git push origin main 2>&1 | tail -3 | sed 's/^/       /'
 fi
 
 echo
