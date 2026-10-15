@@ -21,7 +21,7 @@ export const agenda: Activitat[] = [
     titol: "Engrunes de Poe",
     lloc: "Biblioteca el Castell",
     descripcio:
-      "Lectura dramatitzada de contes d'Edgar Allan Poe, dins la biblioteca, quan ja ha tancat. La façana de la biblioteca s'il·luminarà de vermell de les 20:00 a la mitjanit.",
+      "Què s'amaga entre les prestatgeries quan s'apaguen els llums de la biblioteca? El silenci que coneixes de dia es transforma en un escenari on les ombres cobren vida. Una nit única i irrepetible: un recorregut immersiu de sis lectures dramatitzades d'Edgar Allan Poe, sis històries esgarrifoses i sis veus en la foscor. T'atreveixes a creuar la porta quan la biblioteca tanca? Recomanat a partir de 12 anys (1r d'ESO).",
     tipus: "activitat",
     entrades: "Entrada lliure",
   },
