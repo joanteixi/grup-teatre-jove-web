@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AgendaList from "../components/AgendaList.astro";
+import ObraCard from "../components/ObraCard.astro";
+import { site } from "../data/site";
+import { agenda } from "../data/agenda";
+import { obres } from "../data/obres";
+---
+
+<BaseLayout titol={site.nom}>
+  <section class="portada">
+    <div class="container portada__contingut">
+      <p class="portada__eslògan">{site.eslògan}</p>
+      <h1>{site.nom}</h1>
+      <p class="portada__text">{site.descripcio}</p>
+      <div class="portada__accions">
+        <a class="btn btn--primari" href="/agenda/">Veure l'agenda</a>
+        <a class="btn btn--fantasma" href="/contacte/">Vull participar-hi</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccio seccio--blanc">
+    <div class="container">
+      <div class="centre">
+        <h2>Properes funcions</h2>
+        <p class="prosa">
+          Això és el que tenim a punt. Si en voleu saber més, mireu l'agenda
+          completa o escriviu-nos.
+        </p>
+      </div>
+      <div class="mt-2">
+        <AgendaList activitats={agenda.slice(0, 4)} />
+      </div>
+      <p class="centre mt-2">
+        <a class="btn btn--vi" href="/agenda/">Agenda completa</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="seccio seccio--crema">
+    <div class="container">
+      <h2>Què fem</h2>
+      <div class="graella mt-2">
+        <article class="targeta">
+          <h3>Muntem obres</h3>
+          <p>
+            Cada temporada estrenem una o més produccions, amb gent del poble
+            dalt de l'escenari i darrere les cortines. Comèdia, drama, text
+            contemporani i clàssics.
+          </p>
+          <div class="targeta__peu"><a href="/obres/">Veure les obres →</a></div>
+        </article>
+
+        <article class="targeta">
+          <h3>Escola de teatre</h3>
+          <p>
+            Grups per edats, de la iniciació al grup de joves i sènior. No cal
+            experiència prèvia: es comença jugant i s'acaba fent teatre de debò.
+          </p>
+          <div class="targeta__peu"><a href="/escola/">Com apuntar-s'hi →</a></div>
+        </article>
+
+        <article class="targeta">
+          <h3>Som del poble</h3>
+          <p>
+            Col·laborem amb les entitats i amb l'ajuntament en les festes i els
+            actes del calendari, i obrim el teatre a qui vulgui pujar-hi.
+          </p>
+          <div class="targeta__peu"><a href="/qui-som/">Qui som →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccio seccio--blanc">
+    <div class="container">
+      <h2>Obres destacades</h2>
+      <div class="graella--2 graella mt-2">
+        {obres.slice(0, 2).map((obra) => <ObraCard obra={obra} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="seccio seccio--fosca">
+    <div class="container centre">
+      <h2>Voleu formar part del grup?</h2>
+      <p class="prosa">
+        Necessitem actors i actrius, però també mans per al vestuari, el so, la
+        il·luminació, el cartell i la taquilla. Fer-se soci/a és la manera més
+        fàcil de donar-hi suport.
+      </p>
+      <p class="mt-2">
+        <a class="btn btn--primari" href="/contacte/">Escriu-nos</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

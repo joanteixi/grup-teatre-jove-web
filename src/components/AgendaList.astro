@@ -1,0 +1,52 @@
+---
+import type { Activitat } from "../data/agenda";
+
+interface Props {
+  activitats: Activitat[];
+  buit?: string;
+}
+
+const { activitats, buit = "Encara no hi ha res anunciat. Torna-hi aviat." } = Astro.props;
+
+const MESOS = [
+  "gen.", "febr.", "març", "abr.", "maig", "juny",
+  "jul.", "ag.", "set.", "oct.", "nov.", "des.",
+];
+
+// Ordenem per data i traiem les que ja han passat.
+const avui = new Date().toISOString().slice(0, 10);
+const properes = [...activitats]
+  .filter((a) => a.data >= avui)
+  .sort((a, b) => a.data.localeCompare(b.data));
+---
+
+{
+  properes.length === 0 ? (
+    <p>{buit}</p>
+  ) : (
+    <ul class="agenda">
+      {properes.map((a) => {
+        const [any, mes, dia] = a.data.split("-");
+        return (
+          <li class="agenda__item">
+            <div class="agenda__data" aria-hidden="true">
+              <span class="agenda__dia">{dia}</span>
+              <span class="agenda__mes">{MESOS[Number(mes) - 1]}</span>
+            </div>
+            <div class="agenda__cos">
+              <span class="etiqueta">{a.tipus}</span>
+              <h3>
+                <time datetime={a.data}>{a.titol}</time>
+              </h3>
+              <p class="agenda__meta">
+                {dia}/{mes}/{any} · {a.hora}h · {a.lloc}
+              </p>
+              <p>{a.descripcio}</p>
+              {a.entrades && <p class="agenda__meta">Entrades: {a.entrades}</p>}
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  )
+}

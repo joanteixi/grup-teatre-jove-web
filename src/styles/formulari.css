@@ -1,0 +1,59 @@
+/* Formulari de contacte (illa de React a /contacte) */
+
+.formulari {
+  max-width: 34rem;
+}
+
+.formulari label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.formulari input,
+.formulari select,
+.formulari textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--vora);
+  border-radius: 8px;
+  font: inherit;
+  color: var(--text);
+  background: var(--blanc);
+}
+
+.formulari textarea {
+  resize: vertical;
+}
+
+.formulari input:focus,
+.formulari select:focus,
+.formulari textarea:focus {
+  border-color: var(--vi);
+}
+
+.formulari__nota {
+  font-size: 0.86rem;
+  color: var(--muted);
+  margin-top: 0.9rem;
+}
+
+.contacte__dades {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contacte__dades li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--vora);
+}
+
+.contacte__dades strong {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+}

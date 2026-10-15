@@ -1,0 +1,53 @@
+/**
+ * Agenda: funcions, assajos oberts i activitats.
+ * ⚠️ Aquestes entrades són d'exemple. Canvieu-les per les dates reals.
+ * Format de data: "AAAA-MM-DD" i hora "HH:MM".
+ */
+
+export type Activitat = {
+  data: string;
+  hora: string;
+  titol: string;
+  lloc: string;
+  descripcio: string;
+  tipus: "funció" | "assaig obert" | "activitat" | "assemblea";
+  entrades?: string;
+};
+
+export const agenda: Activitat[] = [
+  {
+    data: "2026-12-26",
+    hora: "20:00",
+    titol: "Els Pastorets",
+    lloc: "Teatre del poble",
+    descripcio: "Primera funció dels Pastorets. Entrades a taquilla i en línia.",
+    tipus: "funció",
+    entrades: "8 € · 6 € per a menors de 8 anys i sòcies",
+  },
+  {
+    data: "2026-12-27",
+    hora: "19:00",
+    titol: "Els Pastorets",
+    lloc: "Teatre del poble",
+    descripcio: "Segona funció dels Pastorets.",
+    tipus: "funció",
+    entrades: "8 € · 6 € per a menors de 8 anys i sòcies",
+  },
+  {
+    data: "2027-02-21",
+    hora: "19:00",
+    titol: "Lectura dramatitzada: Lorca i altres poetes",
+    lloc: "Biblioteca",
+    descripcio:
+      "Lectura dramatitzada a càrrec del grup de sènior. Entrada lliure fins a completar aforament.",
+    tipus: "activitat",
+  },
+  {
+    data: "2027-04-03",
+    hora: "21:00",
+    titol: "Un enemic del poble",
+    lloc: "Teatre del poble",
+    descripcio: "Estrena de la nova producció del grup.",
+    tipus: "funció",
+  },
+];

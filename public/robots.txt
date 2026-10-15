@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# PLACEHOLDER: canvia això pel domini definitiu quan el tingueu
+Sitemap: /sitemap-index.xml

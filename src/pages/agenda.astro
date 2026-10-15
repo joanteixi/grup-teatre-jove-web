@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AgendaList from "../components/AgendaList.astro";
+import { agenda } from "../data/agenda";
+---
+
+<BaseLayout
+  titol="Agenda"
+  descripcio="Properes funcions, assajos oberts i activitats del Grup de Teatre Jove de Vacarisses."
+>
+  <section class="seccio seccio--blanc">
+    <div class="container">
+      <h1>Agenda</h1>
+      <p class="prosa">
+        Aquí teniu les funcions i les activitats que tenim a punt. Si voleu
+        reservar entrades o saber-ne més, escriviu-nos; també les anirem
+        anunciant a les xarxes.
+      </p>
+      <div class="mt-2">
+        <AgendaList activitats={agenda} />
+      </div>
+    </div>
+  </section>
+
+  <section class="seccio seccio--fosca">
+    <div class="container centre">
+      <h2>Vols que t'avisem?</h2>
+      <p class="prosa">
+        Si vols rebre les novetats del grup —estrenes, funcions i activitats—,
+        escriu-nos i et posem a la llista. Sense correu brossa i amb un correu
+        cada cop que hi hagi res a anunciar.
+      </p>
+      <p class="mt-2">
+        <a class="btn btn--primari" href="/contacte/">Demanar informació</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

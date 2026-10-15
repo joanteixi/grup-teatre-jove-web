@@ -1,0 +1,84 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout
+  titol="Avís legal i privacitat"
+  descripcio={`Avís legal i política de privacitat del ${site.nom}.`}
+>
+  <section class="seccio seccio--blanc">
+    <div class="container">
+      <h1>Avís legal i privacitat</h1>
+      <div class="prosa">
+        <p class="etiqueta etiqueta--or">
+          Text genèric: reviseu-lo i completeu les dades abans de publicar
+        </p>
+
+        <h2>Qui tracta les teves dades</h2>
+        <p>
+          {site.nom}, amb domicili a {site.adreca} i correu electrònic{" "}
+          <a href={`mailto:${site.email}`}>{site.email}</a>.
+        </p>
+        <p>
+          <strong>PLACEHOLDER:</strong> cal el NIF de l'entitat i les dades
+          registrals (número de registre d'associacions) abans de publicar.
+        </p>
+
+        <h2>Amb quina finalitat</h2>
+        <p>
+          Les dades que ens envieu per correu o a través del formulari
+          s'utilitzen només per respondre-us i, si ens ho demaneu, per informar-vos
+          de les activitats del grup. No fem perfils ni enviem comunicacions
+          comercials de tercers.
+        </p>
+
+        <h2>Base legal</h2>
+        <p>
+          El consentiment de la persona interessada (article 6.1.a del RGPD) i,
+          quan sigueu persones sòcies, l'execució de la relació associativa.
+        </p>
+
+        <h2>Quant de temps</h2>
+        <p>
+          Les conservem mentre calgui per atendre la vostra petició i, si sou
+          sòcies, mentre duri la relació i el temps que exigeixi la normativa
+          comptable.
+        </p>
+
+        <h2>Qui més hi pot tenir accés</h2>
+        <p>
+          Només els membres de la junta que ho necessitin, i els proveïdors
+          tècnics imprescindibles (allotjament de la web i servei de correu).
+          No cedim dades a tercers amb finalitats comercials.
+        </p>
+
+        <h2>Els teus drets</h2>
+        <p>
+          Podeu demanar accés, rectificació, supressió, limitació, portabilitat
+          i oposició al tractament escrivint a{" "}
+          <a href={`mailto:${site.email}`}>{site.email}</a>. Si no en quedeu
+          satisfets, podeu adreçar-vos a l'Agència Espanyola de Protecció de
+          Dades.
+        </p>
+
+        <h2>Cookies</h2>
+        <p>
+          Aquesta web no fa servir cookies de seguiment ni d'anàlisi. No hi ha
+          cap rastrejador de tercers.
+        </p>
+
+        <h2>Propietat dels continguts</h2>
+        <p>
+          Els textos, els cartells, les fotografies i els vídeos d'aquesta web
+          són del grup o s'utilitzen amb autorització de qui en té els drets. No
+          es poden reutilitzar sense demanar-nos-ho.
+        </p>
+
+        <p>
+          <em>Darrera actualització: {new Date().toLocaleDateString("ca-ES")}</em>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

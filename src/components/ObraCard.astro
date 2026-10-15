@@ -1,0 +1,27 @@
+---
+import type { Obra } from "../data/obres";
+
+interface Props {
+  obra: Obra;
+}
+
+const { obra } = Astro.props;
+
+const estatText = {
+  propera: "Propera estrena",
+  "en cartell": "En cartell",
+  estrenada: "Estrenada",
+} as const;
+---
+
+<article class="targeta">
+  <span class="etiqueta" class:list={{ "etiqueta--or": obra.estat === "propera" }}>
+    {estatText[obra.estat]}
+  </span>
+  <h3>{obra.titol}</h3>
+  <p>{obra.sinopsi}</p>
+  <div class="targeta__peu">
+    <div>{obra.any} · {obra.autor}</div>
+    <div>{obra.direccio}</div>
+  </div>
+</article>

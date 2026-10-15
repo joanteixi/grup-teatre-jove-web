@@ -1,0 +1,60 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { site } from "../data/site";
+
+interface Props {
+  titol: string;
+  descripcio?: string;
+}
+
+const { titol, descripcio = site.descripcio } = Astro.props;
+const titolComplet = titol === site.nom ? titol : `${titol} · ${site.nomCurt}`;
+// PLACEHOLDER: canvia això per l'adreça definitiva de la web (amb domini propi)
+const urlBase = Astro.site?.toString().replace(/\/$/, "") ?? "";
+const urlPagina = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
+
+const dadesEstructurades = {
+  "@context": "https://schema.org",
+  "@type": "PerformingGroup",
+  name: site.nom,
+  description: site.descripcio,
+  email: site.email,
+  address: { "@type": "PostalAddress", addressLocality: site.poble, addressRegion: "Catalunya", addressCountry: "ES" },
+  url: urlBase || undefined,
+};
+---
+
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{titolComplet}</title>
+    <meta name="description" content={descripcio} />
+    <link rel="canonical" href={urlPagina} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Previsualitzacions quan es comparteix l'enllaç (WhatsApp, xarxes) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.nom} />
+    <meta property="og:locale" content="ca_ES" />
+    <meta property="og:title" content={titolComplet} />
+    <meta property="og:description" content={descripcio} />
+    <meta property="og:url" content={urlPagina} />
+    <meta property="og:image" content={`${urlBase}/og.png`} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(dadesEstructurades)} />
+  </head>
+  <body>
+    <a class="salta-al-contingut" href="#contingut">Salta al contingut</a>
+    <Header />
+    <main id="contingut">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Grup de Teatre Jove de Vacarisses">
+  <circle cx="32" cy="32" r="32" fill="#8b1e3f" />
+  <path d="M32 9c3.4 5.6 8.6 10 15.2 12.8v20.4c0 5.9-5.6 10.6-15.2 13.6-9.6-3-15.2-7.7-15.2-13.6V21.8C23.4 19 28.6 14.6 32 9z" fill="#14152a" opacity="0.3" />
+  <text x="32" y="41" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="700" fill="#e0b34a">TJ</text>
+</svg>

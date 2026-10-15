@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/staticwebapp.config.json",
+  "trailingSlash": "always",
+  "navigationFallback": {
+    "rewrite": "/404.html",
+    "exclude": ["/*.{css,js,png,jpg,jpeg,svg,ico,webp,avif,woff,woff2,txt,xml,json,mp4}"]
+  },
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html"
+    }
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "geolocation=(), microphone=(), camera=()",
+    "Cache-Control": "public, max-age=0, must-revalidate"
+  },
+  "mimeTypes": {
+    ".svg": "image/svg+xml"
+  }
+}

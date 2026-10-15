@@ -1,0 +1,35 @@
+---
+import { site, navegacio } from "../data/site";
+import MobileNav from "./MobileNav.tsx";
+---
+
+<header class="capçalera">
+  <div class="container capçalera__fila">
+    <a class="marca" href="/">
+      <span class="marca__sigles" aria-hidden="true">{site.sigles}</span>
+      <span class="marca__text">
+        <span class="marca__nom">{site.nom}</span>
+        <span class="marca__sub">{site.poble}</span>
+      </span>
+    </a>
+
+    <nav aria-label="Navegació principal" class="menu--escriptori">
+      <ul class="menu">
+        {
+          navegacio.map((enllaç) => (
+            <li>
+              <a
+                href={enllaç.href}
+                aria-current={Astro.url.pathname === enllaç.href ? "page" : undefined}
+              >
+                {enllaç.text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <MobileNav client:load items={navegacio} rutaActual={Astro.url.pathname} />
+  </div>
+</header>

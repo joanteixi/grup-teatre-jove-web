@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+
+// PLACEHOLDER: canvieu els noms i els càrrecs pels reals de la junta.
+// Si preferiu no publicar telèfons ni correus personals, deixeu només els càrrecs.
+const junta = [
+  { carrec: "Presidència", nom: "Nom i cognoms" },
+  { carrec: "Secretaria", nom: "Nom i cognoms" },
+  { carrec: "Tresoreria", nom: "Nom i cognoms" },
+  { carrec: "Vocalies", nom: "Various membres" },
+];
+---
+
+<BaseLayout
+  titol="Qui som"
+  descripcio={`Qui som, què fem i com ens organitzem al ${site.nom}.`}
+>
+  <section class="seccio seccio--blanc">
+    <div class="container">
+      <h1>Qui som</h1>
+      <div class="prosa">
+        <p>
+          El {site.nom} és una associació teatral de {site.poble}
+          ({site.comarca}). Som un grup de gent de totes les edats que fa teatre
+          perquè li agrada, i que cada temporada munta les seves pròpies
+          produccions, porta l'escola de teatre i participa en les festes del
+          poble.
+        </p>
+        <p>
+          Formem part del teixit d'entitats del municipi i treballem en
+          col·laboració amb l'ajuntament i amb la resta d'associacions sempre que
+          hi ha una activitat al calendari.
+        </p>
+
+        <h2>Com ens organitzem</h2>
+        <p>
+          L'assemblea de sòcies és qui decideix, i una junta elegida per
+          l'assemblea porta el dia a dia: les obres, l'escola, la comptabilitat i
+          la relació amb les institucions.
+        </p>
+        <ul>
+          {
+            junta.map((p) => (
+              <li>
+                <strong>{p.carrec}:</strong> {p.nom}
+              </li>
+            ))
+          }
+        </ul>
+
+        <h2>Què ens mou</h2>
+        <ul>
+          <li>
+            <strong>Fer teatre de veritat.</strong> Cada producció es treballa
+            amb cura: text, direcció, escenografia, so i llum.
+          </li>
+          <li>
+            <strong>Que ningú no quedi fora.</strong> No cal experiència ni
+            currículum per començar; calen ganes i una mica de constància.
+          </li>
+          <li>
+            <strong>Arrelar al poble.</strong> El teatre és una manera de fer
+            comunitat, i per això el portem a les festes i a les places.
+          </li>
+        </ul>
+
+        <h2>Feu-vos socis</h2>
+        <p>
+          Amb la quota de soci/a ens ajudeu a pagar els materials, els drets
+          d'autor i els espais, i teniu accés preferent a les entrades de les
+          nostres funcions. Escriviu-nos i us expliquem com fer-ho.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

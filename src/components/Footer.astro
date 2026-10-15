@@ -1,0 +1,58 @@
+---
+import { site, navegacio } from "../data/site";
+const any = new Date().getFullYear();
+---
+
+<footer class="peu">
+  <div class="container">
+    <div class="peu__graella">
+      <div>
+        <h3>{site.nom}</h3>
+        <p>
+          {site.descripcio}
+        </p>
+      </div>
+
+      <div>
+        <h3>Navegació</h3>
+        <ul>
+          {navegacio.map((e) => <li><a href={e.href}>{e.text}</a></li>)}
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contacte</h3>
+        <ul>
+          <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+          {site.telefon && <li>{site.telefon}</li>}
+          <li>{site.adreca}</li>
+          {
+            site.xarxes.map((x) => (
+              <li>
+                <a href={x.url} rel="me noopener" target="_blank">
+                  {x.nom}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h3>Vine al grup</h3>
+        <p>
+          Si tens ganes de pujar a un escenari, escriu-nos. No cal experiència:
+          calen actors, però també mans per al vestuari, el so, la llum i el cartell.
+        </p>
+        <a class="btn btn--primari" href="/contacte/">Escriu-nos</a>
+      </div>
+    </div>
+
+    <div class="peu__final">
+      <span>© {any} {site.nom}. Tots els drets reservats.</span>
+      <span>
+        <a href="/avis-legal/">Avís legal i privacitat</a>
+      </span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.tsx";
+import { site } from "../data/site";
+import "../styles/formulari.css";
+---
+
+<BaseLayout
+  titol="Contacte"
+  descripcio={`Contacte del ${site.nom}: escriu-nos per participar al grup, apuntar-te a l'escola o demanar informació.`}
+>
+  <section class="seccio seccio--blanc">
+    <div class="container">
+      <h1>Contacte</h1>
+      <p class="prosa">
+        Escriu-nos i et responem al més aviat possible. Si ens expliques per a què
+        ens escrius, t'ho podrem contestar millor.
+      </p>
+
+      <div class="graella--2 graella mt-2">
+        <div>
+          <h2>Formulari</h2>
+          <ContactForm client:load email={site.email} />
+        </div>
+
+        <div>
+          <h2>Dades de contacte</h2>
+          <ul class="contacte__dades">
+            <li>
+              <strong>Correu</strong>
+              <a href={`mailto:${site.email}`}>{site.email}</a>
+            </li>
+            {site.telefon && (
+              <li>
+                <strong>Telèfon</strong>
+                {site.telefon}
+              </li>
+            )}
+            <li>
+              <strong>On som</strong>
+              {site.adreca}
+            </li>
+            {site.xarxes.map((x) => (
+              <li>
+                <strong>{x.nom}</strong>
+                <a href={x.url} rel="me noopener" target="_blank">{x.url}</a>
+              </li>
+            ))}
+          </ul>
+
+          <h2>Per a institucions i empreses</h2>
+          <p class="prosa">
+            Si voleu contractar una funció, col·laborar-hi o patrocinar una obra,
+            adreceu-vos al mateix correu i ho mirem.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

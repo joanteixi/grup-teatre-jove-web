@@ -1,0 +1,104 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+
+// PLACEHOLDER: ajusteu les franges d'edat, els dies i els preus reals.
+const grups = [
+  {
+    nom: "Iniciació",
+    edats: "de 6 a 8 anys",
+    text: "Jocs teatrals, expressió corporal i primers personatges. L'objectiu és perdre la vergonya i passar-ho bé.",
+  },
+  {
+    nom: "Infantil",
+    edats: "de 9 a 12 anys",
+    text: "Construcció d'escenes curtes i una petita mostra de final de curs davant de les famílies.",
+  },
+  {
+    nom: "Joves",
+    edats: "de 13 a 17 anys",
+    text: "Muntatge d'una obra amb text, direcció i treball d'escena. És el grup que alimenta les produccions del grup.",
+  },
+  {
+    nom: "Sènior",
+    edats: "a partir de 18 anys",
+    text: "Per a qui vol tornar a l'escenari o hi puja per primera vegada de gran. Combinem obres i lectures dramatitzades.",
+  },
+];
+
+const passos = [
+  "Escriu-nos i digue'm l'edat de qui s'hi vol apuntar.",
+  "Et direm quin grup li toca i quan comença.",
+  "Veniu un dia de prova, sense cap compromís.",
+  "Si us agrada, formalitzem la inscripció i la quota.",
+];
+---
+
+<BaseLayout
+  titol="Escola de teatre"
+  descripcio={`Grups de teatre per a totes les edats a ${site.poble}, a càrrec del ${site.nom}.`}
+>
+  <section class="seccio seccio--blanc">
+    <div class="container">
+      <h1>Escola de teatre</h1>
+      <div class="prosa">
+        <p>
+          L'escola de teatre és la porta d'entrada al grup. Hi aprenem a
+          expressar-nos, a escoltar i a treballar en equip, i sobretot hi passem
+          bones estones. No cal cap experiència prèvia: es comença jugant.
+        </p>
+        <p>
+          Cada curs acaba amb una mostra o un muntatge davant del públic, perquè
+          els nens i els joves vegin que el que fan a l'aula serveix per a alguna
+          cosa de veritat.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccio seccio--crema">
+    <div class="container">
+      <h2>Els grups</h2>
+      <div class="graella mt-2">
+        {
+          grups.map((g) => (
+            <article class="targeta">
+              <h3>{g.nom}</h3>
+              <p><strong>{g.edats}</strong></p>
+              <p>{g.text}</p>
+            </article>
+          ))
+        }
+      </div>
+      <p class="etiqueta mt-2">Horaris, dies i quotes: pendents de concretar</p>
+    </div>
+  </section>
+
+  <section class="seccio seccio--blanc">
+    <div class="container">
+      <h2>Com apuntar-s'hi</h2>
+      <div class="graella--2 graella mt-2">
+        <div class="prosa">
+          <ol>
+            {passos.map((p) => <li>{p}</li>)}
+          </ol>
+          <p>
+            <a class="btn btn--vi" href="/contacte/">Escriu-nos</a>
+          </p>
+        </div>
+        <div class="targeta">
+          <h3>Per a les famílies</h3>
+          <p>
+            Els grups d'infantils i joves necessiten autorització de la família
+            per a les activitats i per a les sortides. Us la farem arribar a
+            l'inici del curs.
+          </p>
+          <p>
+            També treballem amb el jovent del poble: si coneixeu algú que hi
+            vulgui entrar, feu-li saber.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

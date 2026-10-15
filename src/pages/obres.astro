@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ObraCard from "../components/ObraCard.astro";
+import { obres } from "../data/obres";
+
+const properes = obres.filter((o) => o.estat === "propera" || o.estat === "en cartell");
+const estrenades = obres.filter((o) => o.estat === "estrenada");
+---
+
+<BaseLayout titol="Obres" descripcio="Les obres i produccions del Grup de Teatre Jove de Vacarisses.">
+  <section class="seccio seccio--blanc">
+    <div class="container">
+      <h1>Obres</h1>
+      <p class="prosa">
+        Aquestes són les nostres produccions: les que tenim en marxa i les que ja
+        hem estrenat. Cada obra és un any de feina de molta gent, i cada estrena
+        és una mica una festa.
+      </p>
+    </div>
+  </section>
+
+  <section class="seccio seccio--crema">
+    <div class="container">
+      <h2>Properes i en cartell</h2>
+      <div class="graella--2 graella mt-2">
+        {properes.map((obra) => <ObraCard obra={obra} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="seccio seccio--blanc">
+    <div class="container">
+      <h2>Ja estrenades</h2>
+      <div class="graella--2 graella mt-2">
+        {estrenades.map((obra) => <ObraCard obra={obra} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

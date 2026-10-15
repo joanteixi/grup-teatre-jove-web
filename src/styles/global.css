@@ -1,0 +1,622 @@
+/* ==========================================================================
+   Grup de Teatre Jove de Vacarisses — estils globals
+   Els colors i les mides viuen aquí com a variables: canviar-los aquí els
+   canvia a tota la web.
+   ========================================================================== */
+
+:root {
+  /* Colors */
+  --fosc: #14152a;
+  --fosc-2: #1e2038;
+  --fosc-3: #2b2d4a;
+  --vi: #8b1e3f;
+  --vi-clar: #b0304f;
+  --or: #e0b34a;
+  --or-fosc: #c1962f;
+  --crema: #f8f5ef;
+  --blanc: #ffffff;
+  --text: #1d1f2b;
+  --muted: #5c6076;
+  --vora: #e3ded3;
+
+  /* Tipografia */
+  --font-titols: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, ui-serif, serif;
+  --font-cos: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Mides */
+  --ample: 68rem;
+  --radi: 10px;
+  --ombra: 0 1px 2px rgba(20, 21, 42, 0.06), 0 8px 24px rgba(20, 21, 42, 0.06);
+
+  /* Espaiat vertical de seccions */
+  --seccio: clamp(3rem, 7vw, 5.5rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-cos);
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--crema);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-titols);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 1.4rem + 3.2vw, 3.6rem);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 1.2rem + 1.7vw, 2.4rem);
+}
+
+h3 {
+  font-size: clamp(1.15rem, 1rem + 0.6vw, 1.4rem);
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--vi);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--vi-clar);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:focus-visible {
+  outline: 3px solid var(--or);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* ---------- Estructures ---------- */
+
+.container {
+  width: 100%;
+  max-width: var(--ample);
+  margin-inline: auto;
+  padding-inline: clamp(1.1rem, 4vw, 2rem);
+}
+
+.seccio {
+  padding-block: var(--seccio);
+}
+
+.seccio--crema {
+  background: var(--crema);
+}
+
+.seccio--blanc {
+  background: var(--blanc);
+}
+
+.seccio--fosca {
+  background: var(--fosc);
+  color: #eef0f7;
+}
+
+.seccio--fosca h1,
+.seccio--fosca h2,
+.seccio--fosca h3 {
+  color: var(--blanc);
+}
+
+.seccio--fosca a {
+  color: var(--or);
+}
+
+.graella {
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+.graella--2 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+}
+
+/* ---------- Capçalera ---------- */
+
+.capçalera {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(20, 21, 42, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid var(--vi);
+}
+
+.capçalera__fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4.5rem;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--blanc);
+}
+
+.marca:hover {
+  color: var(--blanc);
+}
+
+.marca__sigles {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--vi);
+  color: var(--blanc);
+  font-family: var(--font-titols);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  flex: none;
+}
+
+.marca__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.marca__nom {
+  font-family: var(--font-titols);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.marca__sub {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--or);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: #dfe2ee;
+  text-decoration: none;
+  font-size: 0.94rem;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  color: var(--blanc);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.menu a[aria-current="page"] {
+  color: var(--blanc);
+  box-shadow: inset 0 -3px 0 var(--or);
+}
+
+/* ---------- Botons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.35rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--primari {
+  background: var(--or);
+  color: #241a00;
+}
+
+.btn--primari:hover {
+  background: var(--or-fosc);
+  color: #241a00;
+}
+
+.btn--fantasma {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--blanc);
+}
+
+.btn--fantasma:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--blanc);
+}
+
+.btn--vi {
+  background: var(--vi);
+  color: var(--blanc);
+}
+
+.btn--vi:hover {
+  background: var(--vi-clar);
+  color: var(--blanc);
+}
+
+/* ---------- Portada ---------- */
+
+.portada {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(1100px 520px at 12% -12%, rgba(139, 30, 63, 0.55), transparent 62%),
+    radial-gradient(900px 480px at 92% 8%, rgba(224, 179, 74, 0.18), transparent 60%),
+    linear-gradient(160deg, var(--fosc) 0%, var(--fosc-2) 55%, var(--fosc-3) 100%);
+  background-color: var(--fosc);
+  color: var(--blanc);
+}
+
+.portada::after {
+  /* Teló de fons: franges verticals subtils */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.035) 0 2px,
+    transparent 2px 34px
+  );
+  pointer-events: none;
+}
+
+.portada__contingut {
+  position: relative;
+  z-index: 1;
+  padding-block: clamp(3.5rem, 9vw, 7rem);
+  max-width: 46rem;
+}
+
+.portada h1 {
+  color: var(--blanc);
+  margin-bottom: 0.35em;
+}
+
+.portada__eslògan {
+  font-family: var(--font-titols);
+  font-size: clamp(1.15rem, 1rem + 0.9vw, 1.6rem);
+  color: var(--or);
+  margin-bottom: 1rem;
+}
+
+.portada__text {
+  font-size: 1.08rem;
+  color: #dfe2ee;
+  max-width: 38rem;
+}
+
+.portada__accions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+/* ---------- Etiquetes ---------- */
+
+.etiqueta {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  background: rgba(139, 30, 63, 0.12);
+  color: var(--vi);
+}
+
+.etiqueta--or {
+  background: rgba(224, 179, 74, 0.2);
+  color: #7a5a06;
+}
+
+.etiqueta--fosca {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--blanc);
+}
+
+/* ---------- Targetes ---------- */
+
+.targeta {
+  background: var(--blanc);
+  border: 1px solid var(--vora);
+  border-radius: var(--radi);
+  padding: clamp(1.15rem, 2.5vw, 1.6rem);
+  box-shadow: var(--ombra);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.targeta h3 {
+  margin-bottom: 0.15em;
+}
+
+.targeta p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.targeta__peu {
+  margin-top: auto;
+  padding-top: 0.85rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- Agenda ---------- */
+
+.agenda {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.agenda__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(1rem, 3vw, 1.75rem);
+  align-items: start;
+  background: var(--blanc);
+  border: 1px solid var(--vora);
+  border-left: 4px solid var(--vi);
+  border-radius: var(--radi);
+  padding: 1.1rem 1.35rem;
+  box-shadow: var(--ombra);
+}
+
+.agenda__data {
+  text-align: center;
+  min-width: 4.25rem;
+  font-family: var(--font-titols);
+  line-height: 1.05;
+}
+
+.agenda__dia {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--vi);
+}
+
+.agenda__mes {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.agenda__cos h3 {
+  margin-bottom: 0.2em;
+}
+
+.agenda__meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Text llarg ---------- */
+
+.prosa {
+  max-width: 42rem;
+}
+
+.prosa h2 {
+  margin-top: 2em;
+}
+
+.prosa ul {
+  padding-left: 1.2rem;
+}
+
+.prosa li {
+  margin-bottom: 0.4em;
+}
+
+/* ---------- Peu ---------- */
+
+.peu {
+  background: var(--fosc);
+  color: #c9cddd;
+  padding-block: clamp(2.5rem, 5vw, 3.5rem) 1.5rem;
+  border-top: 4px solid var(--vi);
+}
+
+.peu a {
+  color: #e6e8f2;
+  text-decoration: none;
+}
+
+.peu a:hover {
+  color: var(--or);
+  text-decoration: underline;
+}
+
+.peu__graella {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  margin-bottom: 2rem;
+}
+
+.peu h3 {
+  color: var(--blanc);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.peu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.peu li {
+  margin-bottom: 0.4rem;
+}
+
+.peu__final {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  justify-content: space-between;
+  font-size: 0.86rem;
+}
+
+/* ---------- Utilitats ---------- */
+
+.centre {
+  text-align: center;
+}
+
+.centre > * {
+  margin-inline: auto;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.salta-al-contingut {
+  position: absolute;
+  left: -9999px;
+}
+
+.salta-al-contingut:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  background: var(--or);
+  color: #241a00;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+}
+
+/* ---------- Menú mòbil (illa de React) ---------- */
+
+.menu-mobil__boto {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  color: var(--blanc);
+  border-radius: 8px;
+  padding: 0.45rem 0.8rem;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.menu-mobil__panell {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--fosc-2);
+  padding: 0.75rem 0 1rem;
+}
+
+.menu-mobil__panell ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-mobil__panell a {
+  display: block;
+  padding: 0.7rem 0.25rem;
+  color: #e6e8f2;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Només ensenyo el menú mòbil a pantalles estretes */
+@media (min-width: 60rem) {
+  .menu-mobil {
+    display: none;
+  }
+}
+
+@media (max-width: 59.99rem) {
+  .menu--escriptori {
+    display: none;
+  }
+}
+
+@media print {
+  .capçalera,
+  .peu,
+  .menu-mobil {
+    display: none;
+  }
+}
+
+/* Qui prefereix menys moviment, no en rep cap */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .btn:hover {
+    transform: none;
+  }
+}
