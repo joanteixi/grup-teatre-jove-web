@@ -12,6 +12,8 @@ export type Activitat = {
   descripcio: string;
   tipus: "funció" | "assaig obert" | "activitat" | "assemblea";
   entrades?: string;
+  /** Enllaç per reservar o comprar entrades (Entràpolis, etc.). `text` és opcional. */
+  enllac?: { url: string; text?: string };
 };
 
 export const agenda: Activitat[] = [
@@ -24,6 +26,10 @@ export const agenda: Activitat[] = [
       "Què s'amaga entre les prestatgeries quan s'apaguen els llums de la biblioteca? El silenci que coneixes de dia es transforma en un escenari on les ombres cobren vida. Una nit única i irrepetible: un recorregut immersiu de sis lectures dramatitzades d'Edgar Allan Poe, sis històries esgarrifoses i sis veus en la foscor. T'atreveixes a creuar la porta quan la biblioteca tanca? Recomanat a partir de 12 anys (1r d'ESO).",
     tipus: "activitat",
     entrades: "Entrada lliure",
+    enllac: {
+      url: "https://www.entrapolis.com/entrades/engrunes-de-poer",
+      text: "Reserva la teva entrada",
+    },
   },
   {
     data: "2026-12-26",

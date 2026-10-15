@@ -43,6 +43,13 @@ const properes = [...activitats]
               </p>
               <p>{a.descripcio}</p>
               {a.entrades && <p class="agenda__meta">Entrades: {a.entrades}</p>}
+              {a.enllac && (
+                <p class="agenda__enllac">
+                  <a class="btn btn--vi" href={a.enllac.url} target="_blank" rel="noopener">
+                    {a.enllac.text ?? "Reserva la teva entrada"}
+                  </a>
+                </p>
+              )}
             </div>
           </li>
         );
