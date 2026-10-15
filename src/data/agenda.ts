@@ -1,7 +1,7 @@
 /**
  * Agenda: funcions, assajos oberts i activitats.
- * ⚠️ Aquestes entrades són d'exemple. Canvieu-les per les dates reals.
- * Format de data: "AAAA-MM-DD" i hora "HH:MM".
+ * Les dates i els llocs surten del calendari del grup: no els endevinis mai.
+ * Format de data: "AAAA-MM-DD" i hora "HH:MM". Mantingues les entrades ordenades per data.
  */
 
 export type Activitat = {
@@ -28,8 +28,9 @@ export const agenda: Activitat[] = [
     data: "2026-12-26",
     hora: "20:00",
     titol: "Els Pastorets",
-    lloc: "Teatre del poble",
-    descripcio: "Primera funció dels Pastorets. Entrades a taquilla i en línia.",
+    lloc: "Casal de Cultura",
+    descripcio:
+      "Primera funció dels Pastorets, a la sala Antolina Boada i Ferrer. Entrades a taquilla i en línia.",
     tipus: "funció",
     entrades: "8 € · 6 € per a menors de 8 anys i sòcies",
   },
@@ -37,8 +38,8 @@ export const agenda: Activitat[] = [
     data: "2026-12-27",
     hora: "19:00",
     titol: "Els Pastorets",
-    lloc: "Teatre del poble",
-    descripcio: "Segona funció dels Pastorets.",
+    lloc: "Casal de Cultura",
+    descripcio: "Segona funció dels Pastorets, a la sala Antolina Boada i Ferrer.",
     tipus: "funció",
     entrades: "8 € · 6 € per a menors de 8 anys i sòcies",
   },
@@ -55,7 +56,7 @@ export const agenda: Activitat[] = [
     data: "2027-04-03",
     hora: "21:00",
     titol: "Un enemic del poble",
-    lloc: "Teatre del poble",
+    lloc: "Casal de Cultura",
     descripcio: "Estrena de la nova producció del grup.",
     tipus: "funció",
   },
