@@ -19,10 +19,12 @@ export const site = {
   email: "info@grupteatrejove.cat",
   // PLACEHOLDER: cap telèfon real al web si no el voleu publicar
   telefon: "",
-  // PLACEHOLDER: enllaça els perfils reals
   xarxes: [
-    { nom: "Instagram", url: "https://instagram.com/", text: "Instagram" },
-    { nom: "Facebook", url: "https://facebook.com/", text: "Facebook" },
+    {
+      nom: "Instagram",
+      url: "https://www.instagram.com/grupteatrejove/",
+      text: "@grupteatrejove",
+    },
   ],
   // PLACEHOLDER: any de fundació real
   anyFundacio: "19XX",

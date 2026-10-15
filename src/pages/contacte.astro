@@ -1,8 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ContactForm from "../components/ContactForm.tsx";
 import { site } from "../data/site";
-import "../styles/formulari.css";
 ---
 
 <BaseLayout
@@ -16,13 +14,13 @@ import "../styles/formulari.css";
         Escriu-nos i et responem al més aviat possible. Si ens expliques per a què
         ens escrius, t'ho podrem contestar millor.
       </p>
+      <p class="mt-2">
+        <a class="btn btn--vi" href={`mailto:${site.email}`}>
+          Escriu-nos un correu
+        </a>
+      </p>
 
       <div class="graella--2 graella mt-2">
-        <div>
-          <h2>Formulari</h2>
-          <ContactForm client:load email={site.email} />
-        </div>
-
         <div>
           <h2>Dades de contacte</h2>
           <ul class="contacte__dades">
@@ -43,11 +41,15 @@ import "../styles/formulari.css";
             {site.xarxes.map((x) => (
               <li>
                 <strong>{x.nom}</strong>
-                <a href={x.url} rel="me noopener" target="_blank">{x.url}</a>
+                <a href={x.url} rel="me noopener" target="_blank">
+                  {x.text || x.url}
+                </a>
               </li>
             ))}
           </ul>
+        </div>
 
+        <div>
           <h2>Per a institucions i empreses</h2>
           <p class="prosa">
             Si voleu contractar una funció, col·laborar-hi o patrocinar una obra,
