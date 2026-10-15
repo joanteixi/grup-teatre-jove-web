@@ -20,43 +20,31 @@ import { site } from "../data/site";
         </a>
       </p>
 
-      <div class="graella--2 graella mt-2">
-        <div>
-          <h2>Dades de contacte</h2>
-          <ul class="contacte__dades">
-            <li>
-              <strong>Correu</strong>
-              <a href={`mailto:${site.email}`}>{site.email}</a>
-            </li>
-            {site.telefon && (
-              <li>
-                <strong>Telèfon</strong>
-                {site.telefon}
-              </li>
-            )}
-            <li>
-              <strong>On som</strong>
-              {site.adreca}
-            </li>
-            {site.xarxes.map((x) => (
-              <li>
-                <strong>{x.nom}</strong>
-                <a href={x.url} rel="me noopener" target="_blank">
-                  {x.text || x.url}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h2>Per a institucions i empreses</h2>
-          <p class="prosa">
-            Si voleu contractar una funció, col·laborar-hi o patrocinar una obra,
-            adreceu-vos al mateix correu i ho mirem.
-          </p>
-        </div>
-      </div>
+      <h2 class="mt-2">Dades de contacte</h2>
+      <ul class="contacte__dades">
+        <li>
+          <strong>Correu</strong>
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </li>
+        {site.telefon && (
+          <li>
+            <strong>Telèfon</strong>
+            {site.telefon}
+          </li>
+        )}
+        <li>
+          <strong>On som</strong>
+          {site.adreca}
+        </li>
+        {site.xarxes.map((x) => (
+          <li>
+            <strong>{x.nom}</strong>
+            <a href={x.url} rel="me noopener" target="_blank">
+              {x.text || x.url}
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 </BaseLayout>
