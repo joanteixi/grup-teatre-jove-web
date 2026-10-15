@@ -8,6 +8,10 @@ interface Props {
 
 const { activitats, buit = "Encara no hi ha res anunciat. Torna-hi aviat." } = Astro.props;
 
+// Unic markup admès als títols: ~~x~~ surt com a x ratllat (ho fa servir
+// "Engrunes de Po~~e~~r", on la e de Poe porta una ratlla).
+const ambRatllat = (t: string) => t.replace(/~~([^~]+)~~/g, "<s>$1</s>");
+
 const MESOS = [
   "gen.", "febr.", "març", "abr.", "maig", "juny",
   "jul.", "ag.", "set.", "oct.", "nov.", "des.",
@@ -36,7 +40,7 @@ const properes = [...activitats]
             <div class="agenda__cos">
               <span class="etiqueta">{a.tipus}</span>
               <h3>
-                <time datetime={a.data}>{a.titol}</time>
+                <time datetime={a.data} set:html={ambRatllat(a.titol)} />
               </h3>
               <p class="agenda__meta">
                 {dia}/{mes}/{any} · {a.hora}h · {a.lloc}

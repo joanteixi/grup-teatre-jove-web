@@ -20,7 +20,7 @@ export const agenda: Activitat[] = [
   {
     data: "2026-10-30",
     hora: "22:00",
-    titol: "Engrunes de Poe",
+    titol: "Engrunes de Po~~e~~r",
     lloc: "Biblioteca el Castell",
     descripcio:
       "Què s'amaga entre les prestatgeries quan s'apaguen els llums de la biblioteca? El silenci que coneixes de dia es transforma en un escenari on les ombres cobren vida. Una nit única i irrepetible: un recorregut immersiu de sis lectures dramatitzades d'Edgar Allan Poe, sis històries esgarrifoses i sis veus en la foscor. T'atreveixes a creuar la porta quan la biblioteca tanca? Recomanat a partir de 12 anys (1r d'ESO).",
