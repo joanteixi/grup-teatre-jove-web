@@ -23,6 +23,7 @@ export const agenda: Activitat[] = [
     descripcio:
       "Lectura dramatitzada de contes d'Edgar Allan Poe, dins la biblioteca, quan ja ha tancat. La façana de la biblioteca s'il·luminarà de vermell de les 20:00 a la mitjanit.",
     tipus: "activitat",
+    entrades: "Entrada lliure",
   },
   {
     data: "2026-12-26",
