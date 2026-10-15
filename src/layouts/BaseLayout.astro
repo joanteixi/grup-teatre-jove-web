@@ -23,6 +23,8 @@ const dadesEstructurades = {
   email: site.email,
   address: { "@type": "PostalAddress", addressLocality: site.poble, addressRegion: "Catalunya", addressCountry: "ES" },
   url: urlBase || undefined,
+  logo: urlBase ? `${urlBase}/logo.png` : undefined,
+  sameAs: site.xarxes.map((x) => x.url),
 };
 ---
 
@@ -35,6 +37,9 @@ const dadesEstructurades = {
     <meta name="description" content={descripcio} />
     <link rel="canonical" href={urlPagina} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Previsualitzacions quan es comparteix l'enllaç (WhatsApp, xarxes) -->
@@ -45,6 +50,10 @@ const dadesEstructurades = {
     <meta property="og:description" content={descripcio} />
     <meta property="og:url" content={urlPagina} />
     <meta property="og:image" content={`${urlBase}/og.png`} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`Logotip del ${site.nom}`} />
     <meta name="twitter:card" content="summary_large_image" />
 
     <script type="application/ld+json" set:html={JSON.stringify(dadesEstructurades)} />

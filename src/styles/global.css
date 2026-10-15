@@ -177,18 +177,11 @@ img {
   color: var(--blanc);
 }
 
-.marca__sigles {
-  display: grid;
-  place-items: center;
+.marca__logo {
   width: 2.75rem;
   height: 2.75rem;
-  border-radius: 50%;
-  background: var(--vi);
-  color: var(--blanc);
-  font-family: var(--font-titols);
-  font-weight: 700;
-  letter-spacing: 0.02em;
   flex: none;
+  display: block;
 }
 
 .marca__text {
