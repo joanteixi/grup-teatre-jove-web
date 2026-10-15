@@ -5,6 +5,14 @@ import ObraCard from "../components/ObraCard.astro";
 import { site } from "../data/site";
 import { agenda } from "../data/agenda";
 import { obres } from "../data/obres";
+
+// Les properes activitats: filtrem les que ja han passat i ordenem per data,
+// així la portada sempre ensenya el que ve de veritat.
+const avui = new Date().toISOString().slice(0, 10);
+const properes = agenda
+  .filter((a) => a.data >= avui)
+  .sort((a, b) => a.data.localeCompare(b.data))
+  .slice(0, 4);
 ---
 
 <BaseLayout titol={site.nom}>
@@ -30,7 +38,7 @@ import { obres } from "../data/obres";
         </p>
       </div>
       <div class="mt-2">
-        <AgendaList activitats={agenda.slice(0, 4)} />
+        <AgendaList activitats={properes} />
       </div>
       <p class="centre mt-2">
         <a class="btn btn--vi" href="/agenda/">Agenda completa</a>

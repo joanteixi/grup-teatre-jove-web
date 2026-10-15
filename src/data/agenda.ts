@@ -16,6 +16,15 @@ export type Activitat = {
 
 export const agenda: Activitat[] = [
   {
+    data: "2026-10-30",
+    hora: "22:30",
+    titol: "Engrunes de Poe",
+    lloc: "Biblioteca el Castell",
+    descripcio:
+      "Engrunes de Poe 2026, a la Biblioteca el Castell. La façana de la biblioteca s'il·luminarà de vermell de les 20:00 a la mitjanit.",
+    tipus: "activitat",
+  },
+  {
     data: "2026-12-26",
     hora: "20:00",
     titol: "Els Pastorets",
