@@ -32,11 +32,21 @@ const properes = [...activitats]
       {properes.map((a) => {
         const [any, mes, dia] = a.data.split("-");
         return (
-          <li class="agenda__item">
+          <li class:list={["agenda__item", a.imatge && "agenda__item--amb-imatge"]}>
             <div class="agenda__data" aria-hidden="true">
               <span class="agenda__dia">{dia}</span>
               <span class="agenda__mes">{MESOS[Number(mes) - 1]}</span>
             </div>
+            {a.imatge && (
+              <a class="agenda__imatge" href={a.imatge} target="_blank" rel="noopener">
+                <img
+                  src={a.imatge}
+                  alt={`Cartell: ${a.titol.replace(/~~/g, "")}`}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+            )}
             <div class="agenda__cos">
               <span class="etiqueta">{a.tipus}</span>
               <h3>
@@ -47,16 +57,6 @@ const properes = [...activitats]
               </p>
               <p>{a.descripcio}</p>
               {a.entrades && <p class="agenda__meta">Entrades: {a.entrades}</p>}
-              {a.imatge && (
-                <a class="agenda__imatge" href={a.imatge} target="_blank" rel="noopener">
-                  <img
-                    src={a.imatge}
-                    alt={`Cartell: ${a.titol.replace(/~~/g, "")}`}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-              )}
               {a.enllac && (
                 <p class="agenda__enllac">
                   <a class="btn btn--vi" href={a.enllac.url} target="_blank" rel="noopener">

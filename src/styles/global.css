@@ -451,18 +451,34 @@ img {
   margin: 0.75rem 0 0;
 }
 
-/* Cartell de l'activitat, dins la seva fitxa */
+/* Fitxa amb cartell: tres columnes — data, imatge, text */
+.agenda__item--amb-imatge {
+  grid-template-columns: auto auto minmax(0, 1fr);
+}
+
 .agenda__imatge {
   display: block;
-  margin-top: 1rem;
-  width: fit-content;
+  width: clamp(6rem, 11vw, 8.5rem);
+  border-radius: var(--radi);
+  overflow: hidden;
+  border: 1px solid var(--vora);
+  box-shadow: var(--ombra);
 }
 
 .agenda__imatge img {
-  width: min(100%, 20rem);
-  border-radius: var(--radi);
-  border: 1px solid var(--vora);
-  box-shadow: var(--ombra);
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* A pantalles estretes el cartell s'apila sota la data i el text ocupa tota l'amplada */
+@media (max-width: 47.99rem) {
+  .agenda__item--amb-imatge {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .agenda__item--amb-imatge .agenda__cos {
+    grid-column: 1 / -1;
+  }
 }
 
 /* ---------- Text llarg ---------- */
