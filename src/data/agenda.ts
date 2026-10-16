@@ -14,6 +14,8 @@ export type Activitat = {
   entrades?: string;
   /** Enllaç per reservar o comprar entrades (Entràpolis, etc.). `text` és opcional. */
   enllac?: { url: string; text?: string };
+  /** Cartell o foto de l'activitat (ruta dins de `public/`, ex. "/imatges/x.jpg"). */
+  imatge?: string;
 };
 
 export const agenda: Activitat[] = [
@@ -30,6 +32,7 @@ export const agenda: Activitat[] = [
       url: "https://www.entrapolis.com/entrades/engrunes-de-poer",
       text: "Reserva la teva entrada",
     },
+    imatge: "/imatges/engrunes-de-poer.jpg",
   },
   {
     data: "2026-12-26",

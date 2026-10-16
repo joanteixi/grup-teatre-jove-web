@@ -451,6 +451,20 @@ img {
   margin: 0.75rem 0 0;
 }
 
+/* Cartell de l'activitat, dins la seva fitxa */
+.agenda__imatge {
+  display: block;
+  margin-top: 1rem;
+  width: fit-content;
+}
+
+.agenda__imatge img {
+  width: min(100%, 20rem);
+  border-radius: var(--radi);
+  border: 1px solid var(--vora);
+  box-shadow: var(--ombra);
+}
+
 /* ---------- Text llarg ---------- */
 
 .prosa {

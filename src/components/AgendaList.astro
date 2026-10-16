@@ -47,6 +47,16 @@ const properes = [...activitats]
               </p>
               <p>{a.descripcio}</p>
               {a.entrades && <p class="agenda__meta">Entrades: {a.entrades}</p>}
+              {a.imatge && (
+                <a class="agenda__imatge" href={a.imatge} target="_blank" rel="noopener">
+                  <img
+                    src={a.imatge}
+                    alt={`Cartell: ${a.titol.replace(/~~/g, "")}`}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              )}
               {a.enllac && (
                 <p class="agenda__enllac">
                   <a class="btn btn--vi" href={a.enllac.url} target="_blank" rel="noopener">
