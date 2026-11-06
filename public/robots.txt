@@ -3,3 +3,6 @@ Allow: /
 
 # PLACEHOLDER: canvia això pel domini definitiu quan el tingueu
 Sitemap: /sitemap-index.xml
+
+# Pagina interna de la junta, protegit per contrasenya
+Disallow: /assemblea
