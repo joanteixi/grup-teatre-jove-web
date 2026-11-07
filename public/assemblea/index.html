@@ -38,13 +38,13 @@
     background: radial-gradient(120% 90% at 82% 8%, var(--bg2) 0%, var(--bg) 55%);
   }
   .slide.on { opacity: 1; pointer-events: auto; }
-  .kicker { font-size: clamp(12.5px, 1.18vw, 17px); letter-spacing: .2em;
+  .kicker { font-size: clamp(14px, 1.3vw, 19px); letter-spacing: .18em;
     text-transform: uppercase; color: var(--gold); margin-bottom: 2.2vh; }
   h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400;
     font-size: clamp(34px, 5.5vw, 84px); line-height: 1.05; letter-spacing: -.01em; }
   h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400;
-    font-size: clamp(29px, 3.95vw, 62px); line-height: 1.1; margin-bottom: 3.6vh; }
-  .sub { color: var(--muted); font-size: clamp(16.5px, 1.55vw, 24px); line-height: 1.55; max-width: 62ch; }
+    font-size: clamp(33px, 4.65vw, 74px); line-height: 1.08; margin-bottom: 3.6vh; }
+  .sub { color: var(--muted); font-size: clamp(19px, 1.85vw, 29px); line-height: 1.55; max-width: 62ch; }
   .rule { width: 92px; height: 3px; background: var(--gold); margin: 3.4vh 0; }
 
   /* portada */
@@ -61,22 +61,22 @@
     display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.4rem 1.8rem; }
   .junta .carrec { display: block; font-size: clamp(9.5px,.82vw,11.5px); letter-spacing: .18em;
     text-transform: uppercase; color: var(--gold); opacity: .85; margin-bottom: .5em; }
-  .junta b { font-size: clamp(13px, 1.15vw, 17px); font-weight: 500; color: var(--ink); }
+  .junta b { font-size: clamp(15px, 1.3vw, 19.5px); font-weight: 500; color: var(--ink); }
 
   /* xifres grans */
   .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.2vw; align-items: start; }
-  .xifra .l { font-size: clamp(13px, 1.15vw, 16.5px); letter-spacing: .15em; text-transform: uppercase;
+  .xifra .l { font-size: clamp(14.5px, 1.28vw, 19px); letter-spacing: .13em; text-transform: uppercase;
     color: var(--muted); margin-bottom: 1.4vh; }
-  .xifra .v { font-family: Georgia, serif; font-size: clamp(30px, 4.05vw, 64px); line-height: 1.05;
+  .xifra .v { font-family: Georgia, serif; font-size: clamp(34px, 4.6vw, 72px); line-height: 1.05;
     white-space: nowrap; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
   .xifra .v.pos { color: var(--gold); }
   .xifra .v.neg { color: var(--vi2); }
-  .xifra .d { color: var(--muted); font-size: clamp(13px, 1.15vw, 16.5px); margin-top: 1.2vh; }
+  .xifra .d { color: var(--muted); font-size: clamp(15px, 1.3vw, 19px); margin-top: 1.2vh; }
 
   /* llistes amb barres */
   .llista { display: flex; flex-direction: column; gap: clamp(6px, .95vh, 14px); }
   .fila { display: grid; grid-template-columns: 1fr 9.5em; gap: 1.4vw; align-items: center;
-    font-size: clamp(15.5px, 1.62vw, 23px); }
+    font-size: clamp(18px, 1.92vw, 27px); }
   .fila .n { color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .fila .v { text-align: right; font-variant-numeric: tabular-nums; font-weight: 500; }
   .fila .v.pos { color: var(--gold); } .fila .v.neg { color: var(--vi2); }
@@ -89,11 +89,11 @@
     gap: 1rem; align-items: center; }
   .taula-mem .cap { font-size: clamp(9px,.82vw,11px); letter-spacing: .16em; text-transform: uppercase;
     color: var(--muted); padding-bottom: 1.1vh; border-bottom: 1px solid rgba(255,255,255,.14); }
-  .taula-mem .lin { font-size: clamp(13.5px, 1.28vw, 18px); padding: .62vh 0;
+  .taula-mem .lin { font-size: clamp(15.5px, 1.45vw, 21px); padding: .5vh 0;
     border-bottom: 1px solid var(--line); }
   .taula-mem .dat { color: var(--muted); }
   .taula-mem .ent { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink); }
-  .taula-mem .nota { color: var(--muted); font-size: clamp(12.5px, 1.12vw, 16px); }
+  .taula-mem .nota { color: var(--muted); font-size: clamp(14px, 1.24vw, 18px); }
   .taula-mem .tot { border-top: 1px solid var(--gold-clar); margin-top: .4vh; padding-top: 1.1vh;
     font-weight: 600; border-bottom: 0; }
   .taula-mem .tot .ent { color: var(--gold); }
@@ -101,7 +101,7 @@
   /* opinions */
   #opinions { justify-content: center; }
   .cita { transition: opacity .45s ease; min-height: 30vh; display: flex; flex-direction: column; justify-content: center; }
-  .cita blockquote { font-family: Georgia, "Times New Roman", serif; font-size: clamp(22px, 2.8vw, 40px);
+  .cita blockquote { font-family: Georgia, "Times New Roman", serif; font-size: clamp(25px, 3.1vw, 46px);
     line-height: 1.38; max-width: 54ch; letter-spacing: -.005em; }
   .cita blockquote::before { content: "«"; color: var(--gold); }
   .cita blockquote::after { content: "»"; color: var(--gold); }
@@ -114,14 +114,19 @@
   .barra-dades b { display: block; font-family: Georgia, serif; font-size: clamp(22px, 2.3vw, 34px);
     color: var(--gold); letter-spacing: 0; text-transform: none; margin-bottom: .35em; }
 
+  .densa h2 { font-size: clamp(27px, 3.5vw, 54px); margin-bottom: 2.2vh; }
+  .densa .taula .lin { font-size: clamp(15px, 1.5vw, 21px); padding: .3vh 0; }
+  .densa .taula .grup { padding: 1vh 0 .3vh; font-size: clamp(11.5px, 1vw, 14px); }
+  .densa .taula .tot { padding-top: .9vh; }
+
   .grid3.dues-xifres { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 44rem; }
 
   /* notes */
   .notes { display: grid; grid-template-columns: 1fr 1fr; gap: 2.6vw 4vw; margin-top: 1vh; }
   .notes div { border-left: 2px solid var(--accent-soft); padding-left: 1.1em; }
-  .notes b { display: block; color: var(--gold); font-weight: 500; font-size: clamp(13px,1.16vw,17.5px);
+  .notes b { display: block; color: var(--gold); font-weight: 500; font-size: clamp(14.5px,1.26vw,19px);
     letter-spacing: .1em; text-transform: uppercase; margin-bottom: .6em; }
-  .notes p { color: var(--muted); font-size: clamp(15px, 1.38vw, 21px); line-height: 1.5; }
+  .notes p { color: var(--muted); font-size: clamp(17px, 1.55vw, 24px); line-height: 1.5; }
 
   /* navegació */
   .dots { position: fixed; bottom: 3.2vh; left: 8vw; display: flex; gap: 9px; z-index: 10; }
@@ -133,26 +138,26 @@
     color: var(--muted); font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
     padding: .55em 1em; border-radius: 2px; cursor: pointer; }
   .btn:hover { color: var(--gold); border-color: var(--gold); }
-  .btn-tema { left: 8vw; right: auto; top: auto; bottom: 7.2vh; }
+  .btn-tema { left: auto; right: calc(8vw + 178px); top: 3.2vh; }
 
   .taula { display: flex; flex-direction: column; max-width: 57rem; }
-  .taula .cap, .taula .lin { display: grid; grid-template-columns: minmax(0,1fr) 8rem 8rem 8.4rem;
-    gap: .9rem; align-items: center; }
+  .taula .cap, .taula .lin { display: grid; grid-template-columns: minmax(0,1fr) 9.6rem 9.6rem 10rem;
+    gap: .8rem; align-items: center; }
   .taula .grup { font-size: clamp(9px,.84vw,11.5px); letter-spacing: .2em; text-transform: uppercase;
     color: var(--gold); opacity: .8; padding: 1.5vh 0 .5vh; }
   .taula .grup:first-of-type { padding-top: .2vh; }
   .taula .cap { font-size: clamp(10.5px,.96vw,13.5px); letter-spacing: .14em; text-transform: uppercase;
     color: var(--muted); padding-bottom: 1.1vh; border-bottom: 1px solid var(--line-fort); margin-bottom: .6vh; }
-  .taula .lin { font-size: clamp(14.5px, 1.45vw, 20.5px); padding: .5vh 0;
+  .taula .lin { font-size: clamp(17px, 1.68vw, 24px); padding: .42vh 0;
     border-bottom: 1px solid var(--line); }
   .taula .lin:last-child { border-bottom: 0; }
-  .taula .x { text-align: right; font-variant-numeric: tabular-nums; }
+  .taula .x { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .taula .nom { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .taula .ing { color: rgba(247,242,232,.92); }
+  .taula .ing { color: var(--ink); }
   .taula .des { color: var(--vi2); }
   .taula .res { font-weight: 600; }
   .taula .res.pos { color: var(--gold); } .taula .res.neg { color: var(--vi2); }
-  .taula .buit, .taula .x:only-child { color: rgba(247,242,232,.28); }
+  .taula .buit, .taula .x:only-child { color: var(--weak); }
   .taula .ajust { color: var(--muted); font-size: clamp(10.5px,1vw,14px); }
   .taula .tot { border-top: 1px solid var(--gold-clar); margin-top: .5vh; padding-top: 1.1vh;
     font-weight: 600; font-size: clamp(12px,1.16vw,17px); }
@@ -160,7 +165,7 @@
   .dues { display: grid; grid-template-columns: 1fr 1fr; gap: 3.4vw; align-items: start; }
   .dues h3 { font-size: clamp(12px, 1.1vw, 16px); letter-spacing: .18em; text-transform: uppercase;
     color: var(--muted); font-weight: 500; margin-bottom: 1.8vh; }
-  .dues .fila { font-size: clamp(13.5px, 1.3vw, 19px); grid-template-columns: 1fr 8em; }
+  .dues .fila { font-size: clamp(15.5px, 1.45vw, 21px); grid-template-columns: 1fr 8.4em; }
   .dues .llista { gap: clamp(4px, .62vh, 9px); }
   .dues .fila.tot { border-top: 1px solid var(--gold-clar); margin-top: .6vh; padding-top: .8vh;
     font-weight: 600; }
@@ -404,7 +409,13 @@
   <section class="slide">
     <div class="kicker">Resultat per obra</div>
     <h2>Cada obra, el seu compte</h2>
-    <div class="taula"><div class="cap"><div>Obra o activitat</div><div class="x">Ingressos</div><div class="x">Despeses</div><div class="x">Resultat</div></div><div class="grup">Obres</div><div class="lin"><div class="nom">Total Pastorets 2025</div><div class="x ing">2.183,00 €</div><div class="x des">−1.677,83 €</div><div class="x res pos">+505,17 €</div></div><div class="lin"><div class="nom">Criatures 2026</div><div class="x ing">2.292,49 €</div><div class="x des">−2.425,53 €</div><div class="x res neg">−133,04 €</div></div><div class="lin"><div class="nom">Pervertimento 2026</div><div class="x ing">988,00 €</div><div class="x des">−1.322,65 €</div><div class="x res neg">−334,65 €</div></div><div class="lin"><div class="nom">Engrunes 2026</div><div class="x ing buit">—</div><div class="x des">−238,58 €</div><div class="x res neg">−238,58 €</div></div><div class="lin"><div class="nom">Teatre Senior 2026</div><div class="x ing">1.886,72 €</div><div class="x des">−3.009,08 €</div><div class="x res neg">−1.122,36 €</div></div><div class="lin"><div class="nom">Escola Teatre 2026</div><div class="x ing">6.525,50 €</div><div class="x des">−5.124,03 €</div><div class="x res pos">+1.401,47 €</div></div><div class="lin"><div class="nom">Somnis d'institut 2026</div><div class="x ing buit">—</div><div class="x des">−182,90 €</div><div class="x res neg">−182,90 €</div></div><div class="grup">Subvencions, costes i ajustos</div><div class="lin"><div class="nom">Subvenció 2026</div><div class="x ing">3.619,80 €</div><div class="x des buit">—</div><div class="x res pos">+3.619,80 €</div></div><div class="lin"><div class="nom">Subvenció 2025 (cobrada el 2025)</div><div class="x ing">250,00 €</div><div class="x des buit">—</div><div class="x res pos">+250,00 €</div></div><div class="lin"><div class="nom">Costes nov-des 2025</div><div class="x ing buit">—</div><div class="x des">−669,06 €</div><div class="x res neg">−669,06 €</div></div><div class="lin"><div class="nom">Inversions 2026</div><div class="x ing buit">—</div><div class="x des">−113,27 €</div><div class="x res neg">−113,27 €</div></div><div class="lin"><div class="nom">Costes administratius 2026</div><div class="x ing buit">—</div><div class="x des">−1.487,36 €</div><div class="x res neg">−1.487,36 €</div></div><div class="lin ajust"><div class="nom">Ajust de tancament 2025</div><div class="x ing buit">—</div><div class="x des">−12,00 €</div><div class="x res neg">−12,00 €</div></div><div class="lin tot"><div class="nom">TOTAL</div><div class="x ing">17.745,51 €</div><div class="x des">−16.262,29 €</div><div class="x res pos">+1.483,22 €</div></div></div>
+    <div class="taula"><div class="cap"><div>Obra o activitat</div><div class="x">Ingressos</div><div class="x">Despeses</div><div class="x">Resultat</div></div><div class="lin"><div class="nom">Total Pastorets 2025</div><div class="x ing">2.183,00 €</div><div class="x des">−1.677,83 €</div><div class="x res pos">+505,17 €</div></div><div class="lin"><div class="nom">Criatures 2026</div><div class="x ing">2.292,49 €</div><div class="x des">−2.425,53 €</div><div class="x res neg">−133,04 €</div></div><div class="lin"><div class="nom">Pervertimento 2026</div><div class="x ing">988,00 €</div><div class="x des">−1.322,65 €</div><div class="x res neg">−334,65 €</div></div><div class="lin"><div class="nom">Engrunes 2026</div><div class="x ing buit">—</div><div class="x des">−238,58 €</div><div class="x res neg">−238,58 €</div></div><div class="lin"><div class="nom">Teatre Senior 2026</div><div class="x ing">1.886,72 €</div><div class="x des">−3.009,08 €</div><div class="x res neg">−1.122,36 €</div></div><div class="lin"><div class="nom">Escola Teatre 2026</div><div class="x ing">6.525,50 €</div><div class="x des">−5.124,03 €</div><div class="x res pos">+1.401,47 €</div></div><div class="lin"><div class="nom">Somnis d'institut 2026</div><div class="x ing buit">—</div><div class="x des">−182,90 €</div><div class="x res neg">−182,90 €</div></div><div class="lin tot"><div class="nom">Subtotal de les obres</div><div class="x ing">13.875,71 €</div><div class="x des">−13.980,60 €</div><div class="x res neg">−104,89 €</div></div></div>
+  </section>
+
+  <section class="slide">
+    <div class="kicker">Resultat per obra</div>
+    <h2>Subvencions, costes i ajustos</h2>
+    <div class="taula"><div class="cap"><div>Obra o activitat</div><div class="x">Ingressos</div><div class="x">Despeses</div><div class="x">Resultat</div></div><div class="lin"><div class="nom">Subvenció 2026</div><div class="x ing">3.619,80 €</div><div class="x des buit">—</div><div class="x res pos">+3.619,80 €</div></div><div class="lin"><div class="nom">Subvenció 2025 (cobrada el 2025)</div><div class="x ing">250,00 €</div><div class="x des buit">—</div><div class="x res pos">+250,00 €</div></div><div class="lin"><div class="nom">Costes nov-des 2025</div><div class="x ing buit">—</div><div class="x des">−669,06 €</div><div class="x res neg">−669,06 €</div></div><div class="lin"><div class="nom">Inversions 2026</div><div class="x ing buit">—</div><div class="x des">−113,27 €</div><div class="x res neg">−113,27 €</div></div><div class="lin"><div class="nom">Costes administratius 2026</div><div class="x ing buit">—</div><div class="x des">−1.487,36 €</div><div class="x res neg">−1.487,36 €</div></div><div class="lin ajust"><div class="nom">Ajust de tancament 2025</div><div class="x ing buit">—</div><div class="x des">−12,00 €</div><div class="x res neg">−12,00 €</div></div><div class="lin tot"><div class="nom">TOTAL DEL CICLE</div><div class="x ing">17.745,51 €</div><div class="x des">−16.262,29 €</div><div class="x res pos">+1.483,22 €</div></div></div>
   </section>
 
   <!-- 6 -->
