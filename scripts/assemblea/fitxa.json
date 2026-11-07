@@ -1,0 +1,86 @@
+{
+  "inici": 5485.17,
+  "final": 6968.39,
+  "banc": 6087.17,
+  "efectiu": 880.4,
+  "balanc": 1483.2200000000003,
+  "obres": [
+    {
+      "nom": "Total Pastorets 2025",
+      "ing": 2183.0,
+      "desp": -1677.83,
+      "net": 505.1700000000001
+    },
+    {
+      "nom": "Costes financeres 2025",
+      "ing": 0.0,
+      "desp": -669.06,
+      "net": -669.06
+    },
+    {
+      "nom": "Costes administratives 2026",
+      "ing": 0.0,
+      "desp": -1487.36,
+      "net": -1487.36
+    },
+    {
+      "nom": "Criatures 2026",
+      "ing": 2292.49,
+      "desp": -2425.53,
+      "net": -133.04000000000042
+    },
+    {
+      "nom": "Engrunes 2026",
+      "ing": 0.0,
+      "desp": -238.57999999999998,
+      "net": -238.57999999999998
+    },
+    {
+      "nom": "Escola Teatre 2026",
+      "ing": 6525.5,
+      "desp": -5124.029999999999,
+      "net": 1401.4700000000012
+    },
+    {
+      "nom": "Inversions 2026",
+      "ing": 0.0,
+      "desp": -113.27,
+      "net": -113.27
+    },
+    {
+      "nom": "Pervertimento 2026",
+      "ing": 988.0,
+      "desp": -1322.65,
+      "net": -334.6500000000001
+    },
+    {
+      "nom": "Somnis d'institut 2026",
+      "ing": 0.0,
+      "desp": -182.9,
+      "net": -182.9
+    },
+    {
+      "nom": "Subvenció 2025*",
+      "ing": 250.0,
+      "desp": 0.0,
+      "net": 250.0
+    },
+    {
+      "nom": "Subvenció 2026",
+      "ing": 3619.8,
+      "desp": 0.0,
+      "net": 3619.8
+    },
+    {
+      "nom": "Teatre Senior 2026",
+      "ing": 1886.72,
+      "desp": -3009.08,
+      "net": -1122.36
+    }
+  ],
+  "tot_ing": 17745.510000000002,
+  "tot_desp": -16250.289999999999,
+  "tot_net": 1495.220000000001,
+  "ajust": 1483.220000000001,
+  "net_amb_ajust": 0.0
+}
