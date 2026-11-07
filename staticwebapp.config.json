@@ -7,9 +7,16 @@
   },
   "responseOverrides": {
     "404": {
-      "rewrite": "/404.html"
+      "rewrite": "/404.html",
+      "statusCode": 404
     }
   },
+  "routes": [
+    {
+      "route": "/robots.txt",
+      "rewrite": "/robots.txt"
+    }
+  ],
   "globalHeaders": {
     "X-Content-Type-Options": "nosniff",
     "X-Frame-Options": "SAMEORIGIN",
