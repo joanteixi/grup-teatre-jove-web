@@ -9,11 +9,11 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     /* tema clar: el de projecció */
-    --bg: #FBF8F2; --bg2: #F2EBDF; --ink: #1A1B2E;
-    --gold: #A2701A; --gold-clar: #C79A3A; --vi: #8B1E3F; --vi2: #A83A4C;
-    --muted: rgba(26,27,46,.64);
-    --line: rgba(26,27,46,.13); --line-fort: rgba(26,27,46,.22);
-    --track: rgba(26,27,46,.09); --weak: rgba(26,27,46,.38);
+    --bg: #FBF8F2; --bg2: #EFE7D8; --ink: #08090F;
+    --gold: #8A5C10; --gold-clar: #9C6D16; --vi: #7E1A38; --vi2: #96202F;
+    --muted: rgba(8,9,15,.82);
+    --line: rgba(13,14,27,.20); --line-fort: rgba(13,14,27,.30);
+    --track: rgba(13,14,27,.13); --weak: rgba(13,14,27,.45);
     --accent-soft: rgba(162,112,26,.4); --aigua: rgba(162,112,26,.10);
   }
   html[data-tema="fosc"] {
@@ -38,13 +38,13 @@
     background: radial-gradient(120% 90% at 82% 8%, var(--bg2) 0%, var(--bg) 55%);
   }
   .slide.on { opacity: 1; pointer-events: auto; }
-  .kicker { font-size: clamp(11px, 1.05vw, 15px); letter-spacing: .22em;
+  .kicker { font-size: clamp(12.5px, 1.18vw, 17px); letter-spacing: .2em;
     text-transform: uppercase; color: var(--gold); margin-bottom: 2.2vh; }
   h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400;
-    font-size: clamp(30px, 5.1vw, 78px); line-height: 1.05; letter-spacing: -.01em; }
+    font-size: clamp(34px, 5.5vw, 84px); line-height: 1.05; letter-spacing: -.01em; }
   h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400;
-    font-size: clamp(24px, 3.3vw, 50px); line-height: 1.12; margin-bottom: 4vh; }
-  .sub { color: var(--muted); font-size: clamp(13px, 1.25vw, 19px); line-height: 1.55; max-width: 62ch; }
+    font-size: clamp(29px, 3.95vw, 62px); line-height: 1.1; margin-bottom: 3.6vh; }
+  .sub { color: var(--muted); font-size: clamp(16.5px, 1.55vw, 24px); line-height: 1.55; max-width: 62ch; }
   .rule { width: 92px; height: 3px; background: var(--gold); margin: 3.4vh 0; }
 
   /* portada */
@@ -59,24 +59,24 @@
   .meta b { color: var(--ink); font-weight: 500; }
   .junta { margin-top: 3.2vh; padding-top: 2.6vh; border-top: 1px solid var(--line);
     display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.4rem 1.8rem; }
-  .junta .carrec { display: block; font-size: clamp(8px,.72vw,10px); letter-spacing: .2em;
+  .junta .carrec { display: block; font-size: clamp(9.5px,.82vw,11.5px); letter-spacing: .18em;
     text-transform: uppercase; color: var(--gold); opacity: .85; margin-bottom: .5em; }
-  .junta b { font-size: clamp(11.5px, 1.02vw, 14.5px); font-weight: 500; color: var(--ink); }
+  .junta b { font-size: clamp(13px, 1.15vw, 17px); font-weight: 500; color: var(--ink); }
 
   /* xifres grans */
   .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.2vw; align-items: start; }
-  .xifra .l { font-size: clamp(11px, 1vw, 14px); letter-spacing: .18em; text-transform: uppercase;
+  .xifra .l { font-size: clamp(13px, 1.15vw, 16.5px); letter-spacing: .15em; text-transform: uppercase;
     color: var(--muted); margin-bottom: 1.4vh; }
-  .xifra .v { font-family: Georgia, serif; font-size: clamp(24px, 3.35vw, 54px); line-height: 1.05;
+  .xifra .v { font-family: Georgia, serif; font-size: clamp(30px, 4.05vw, 64px); line-height: 1.05;
     white-space: nowrap; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
   .xifra .v.pos { color: var(--gold); }
   .xifra .v.neg { color: var(--vi2); }
-  .xifra .d { color: var(--muted); font-size: clamp(11px, 1vw, 14px); margin-top: 1.2vh; }
+  .xifra .d { color: var(--muted); font-size: clamp(13px, 1.15vw, 16.5px); margin-top: 1.2vh; }
 
   /* llistes amb barres */
   .llista { display: flex; flex-direction: column; gap: clamp(6px, .95vh, 14px); }
   .fila { display: grid; grid-template-columns: 1fr 9.5em; gap: 1.4vw; align-items: center;
-    font-size: clamp(12px, 1.28vw, 19px); }
+    font-size: clamp(15.5px, 1.62vw, 23px); }
   .fila .n { color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .fila .v { text-align: right; font-variant-numeric: tabular-nums; font-weight: 500; }
   .fila .v.pos { color: var(--gold); } .fila .v.neg { color: var(--vi2); }
@@ -89,11 +89,11 @@
     gap: 1rem; align-items: center; }
   .taula-mem .cap { font-size: clamp(9px,.82vw,11px); letter-spacing: .16em; text-transform: uppercase;
     color: var(--muted); padding-bottom: 1.1vh; border-bottom: 1px solid rgba(255,255,255,.14); }
-  .taula-mem .lin { font-size: clamp(11px, 1.06vw, 15px); padding: .75vh 0;
+  .taula-mem .lin { font-size: clamp(13.5px, 1.28vw, 18px); padding: .62vh 0;
     border-bottom: 1px solid var(--line); }
   .taula-mem .dat { color: var(--muted); }
   .taula-mem .ent { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; color: var(--ink); }
-  .taula-mem .nota { color: var(--muted); font-size: clamp(10px, .96vw, 13.5px); }
+  .taula-mem .nota { color: var(--muted); font-size: clamp(12.5px, 1.12vw, 16px); }
   .taula-mem .tot { border-top: 1px solid var(--gold-clar); margin-top: .4vh; padding-top: 1.1vh;
     font-weight: 600; border-bottom: 0; }
   .taula-mem .tot .ent { color: var(--gold); }
@@ -101,17 +101,17 @@
   /* opinions */
   #opinions { justify-content: center; }
   .cita { transition: opacity .45s ease; min-height: 30vh; display: flex; flex-direction: column; justify-content: center; }
-  .cita blockquote { font-family: Georgia, "Times New Roman", serif; font-size: clamp(17px, 2.25vw, 32px);
+  .cita blockquote { font-family: Georgia, "Times New Roman", serif; font-size: clamp(22px, 2.8vw, 40px);
     line-height: 1.38; max-width: 54ch; letter-spacing: -.005em; }
   .cita blockquote::before { content: "«"; color: var(--gold); }
   .cita blockquote::after { content: "»"; color: var(--gold); }
-  .cita .autor { margin-top: 2.4vh; font-size: clamp(12px, 1.06vw, 15.5px); color: var(--muted); letter-spacing: .05em; }
+  .cita .autor { margin-top: 2.4vh; font-size: clamp(13.5px, 1.2vw, 18px); color: var(--muted); letter-spacing: .05em; }
   .cita .autor b { color: var(--ink); font-weight: 500; }
   .cita .estrelles { color: var(--gold); letter-spacing: .1em; margin-left: .5em; }
   .barra-dades { display: flex; gap: 3vw; margin-top: 4vh; padding-top: 2.6vh;
     border-top: 1px solid var(--line); flex-wrap: wrap; }
-  .barra-dades div { font-size: clamp(9.5px, .84vw, 12px); color: var(--muted); letter-spacing: .14em; text-transform: uppercase; }
-  .barra-dades b { display: block; font-family: Georgia, serif; font-size: clamp(19px, 2vw, 29px);
+  .barra-dades div { font-size: clamp(11px, .95vw, 14px); color: var(--muted); letter-spacing: .14em; text-transform: uppercase; }
+  .barra-dades b { display: block; font-family: Georgia, serif; font-size: clamp(22px, 2.3vw, 34px);
     color: var(--gold); letter-spacing: 0; text-transform: none; margin-bottom: .35em; }
 
   .grid3.dues-xifres { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 44rem; }
@@ -119,9 +119,9 @@
   /* notes */
   .notes { display: grid; grid-template-columns: 1fr 1fr; gap: 2.6vw 4vw; margin-top: 1vh; }
   .notes div { border-left: 2px solid var(--accent-soft); padding-left: 1.1em; }
-  .notes b { display: block; color: var(--gold); font-weight: 500; font-size: clamp(11px,1.02vw,15px);
-    letter-spacing: .12em; text-transform: uppercase; margin-bottom: .6em; }
-  .notes p { color: var(--muted); font-size: clamp(12px, 1.12vw, 17px); line-height: 1.5; }
+  .notes b { display: block; color: var(--gold); font-weight: 500; font-size: clamp(13px,1.16vw,17.5px);
+    letter-spacing: .1em; text-transform: uppercase; margin-bottom: .6em; }
+  .notes p { color: var(--muted); font-size: clamp(15px, 1.38vw, 21px); line-height: 1.5; }
 
   /* navegació */
   .dots { position: fixed; bottom: 3.2vh; left: 8vw; display: flex; gap: 9px; z-index: 10; }
@@ -133,7 +133,7 @@
     color: var(--muted); font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
     padding: .55em 1em; border-radius: 2px; cursor: pointer; }
   .btn:hover { color: var(--gold); border-color: var(--gold); }
-  .btn-tema { left: 8vw; right: auto; }
+  .btn-tema { left: 8vw; right: auto; top: auto; bottom: 7.2vh; }
 
   .taula { display: flex; flex-direction: column; max-width: 57rem; }
   .taula .cap, .taula .lin { display: grid; grid-template-columns: minmax(0,1fr) 8rem 8rem 8.4rem;
@@ -141,9 +141,9 @@
   .taula .grup { font-size: clamp(9px,.84vw,11.5px); letter-spacing: .2em; text-transform: uppercase;
     color: var(--gold); opacity: .8; padding: 1.5vh 0 .5vh; }
   .taula .grup:first-of-type { padding-top: .2vh; }
-  .taula .cap { font-size: clamp(9.5px,.86vw,12px); letter-spacing: .16em; text-transform: uppercase;
+  .taula .cap { font-size: clamp(10.5px,.96vw,13.5px); letter-spacing: .14em; text-transform: uppercase;
     color: var(--muted); padding-bottom: 1.1vh; border-bottom: 1px solid var(--line-fort); margin-bottom: .6vh; }
-  .taula .lin { font-size: clamp(11.5px, 1.12vw, 16px); padding: .62vh 0;
+  .taula .lin { font-size: clamp(14.5px, 1.45vw, 20.5px); padding: .5vh 0;
     border-bottom: 1px solid var(--line); }
   .taula .lin:last-child { border-bottom: 0; }
   .taula .x { text-align: right; font-variant-numeric: tabular-nums; }
@@ -158,9 +158,9 @@
     font-weight: 600; font-size: clamp(12px,1.16vw,17px); }
 
   .dues { display: grid; grid-template-columns: 1fr 1fr; gap: 3.4vw; align-items: start; }
-  .dues h3 { font-size: clamp(11px, 1.02vw, 14px); letter-spacing: .18em; text-transform: uppercase;
+  .dues h3 { font-size: clamp(12px, 1.1vw, 16px); letter-spacing: .18em; text-transform: uppercase;
     color: var(--muted); font-weight: 500; margin-bottom: 1.8vh; }
-  .dues .fila { font-size: clamp(11px, 1.08vw, 16px); grid-template-columns: 1fr 7.6em; }
+  .dues .fila { font-size: clamp(13.5px, 1.3vw, 19px); grid-template-columns: 1fr 8em; }
   .dues .llista { gap: clamp(4px, .62vh, 9px); }
   .dues .fila.tot { border-top: 1px solid var(--gold-clar); margin-top: .6vh; padding-top: .8vh;
     font-weight: 600; }
@@ -514,7 +514,7 @@
 <div class="fila"><div class="n">Costes administratius</div><div class="v">1.530,00 €</div></div>
 <div class="fila"><div class="n">Hisenda</div><div class="v">850,00 €</div></div>
 <div class="fila"><div class="n">Formació interna</div><div class="v">300,00 €</div></div>
-<div class="fila"><div class="n">Colònies del grup</div><div class="v">2.000,00 €</div></div>
+<div class="fila"><div class="n">Sortides de teatre</div><div class="v">2.000,00 €</div></div>
 <div class="fila"><div class="n">Imprevistos (5 %)</div><div class="v">942,75 €</div></div>
           <div class="fila tot"><div class="n">Total</div><div class="v">19.797,75 €</div></div>
         </div>
