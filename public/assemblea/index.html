@@ -9,9 +9,9 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     /* tema clar: el de projecció */
-    --bg: #FBF8F2; --bg2: #EFE7D8; --ink: #08090F;
-    --gold: #8A5C10; --gold-clar: #9C6D16; --vi: #7E1A38; --vi2: #96202F;
-    --muted: rgba(8,9,15,.82);
+    --bg: #FFFFFF; --bg2: #F3EFE6; --ink: #05060B;
+    --gold: #6E4A06; --gold-clar: #5F3F04; --vi: #6E1430; --vi2: #8A1B29;
+    --muted: rgba(5,6,11,.86);
     --line: rgba(13,14,27,.20); --line-fort: rgba(13,14,27,.30);
     --track: rgba(13,14,27,.13); --weak: rgba(13,14,27,.45);
     --accent-soft: rgba(162,112,26,.4); --aigua: rgba(162,112,26,.10);
@@ -35,7 +35,7 @@
     position: absolute; inset: 0; padding: 3.6vh 4.4vw 5.4vh;
     display: flex; flex-direction: column; justify-content: center;
     opacity: 0; pointer-events: none; transition: opacity .4s ease;
-    background: radial-gradient(120% 90% at 82% 8%, var(--bg2) 0%, var(--bg) 55%);
+    background: var(--bg);
   }
   .slide.on { opacity: 1; pointer-events: auto; }
   .kicker { font-size: clamp(15.5px, 1.42vw, 21px); letter-spacing: .16em;
