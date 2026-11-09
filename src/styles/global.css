@@ -281,6 +281,18 @@ img {
   color: var(--blanc);
 }
 
+/* Dins d'una secció fosca, `.seccio--fosca a` tenyia d'or tots els enllaços i el
+   botó primari quedava or sobre or (text invisible). Els botons manen. */
+.seccio--fosca a.btn--primari,
+.seccio--fosca a.btn--primari:hover {
+  color: #241a00;
+}
+
+.seccio--fosca a.btn--fantasma,
+.seccio--fosca a.btn--fantasma:hover {
+  color: var(--blanc);
+}
+
 /* ---------- Portada ---------- */
 
 .portada {
